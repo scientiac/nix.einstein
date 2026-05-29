@@ -13,6 +13,7 @@
       self.homeModules.gnome
       self.homeModules.ghostty
       self.homeModules.terminal
+      self.homeModules.mpv
     ];
 
     home.username = "scientiac";
