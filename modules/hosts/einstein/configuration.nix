@@ -31,12 +31,6 @@
     boot.loader.efi.canTouchEfiVariables = true;
 
     boot = {
-      plymouth = {
-        enable = true;
-        theme = "bgrt";
-      };
-
-      # Enable "Silent boot"
       consoleLogLevel = 3;
       initrd.verbose = false;
       kernelParams = [
@@ -44,6 +38,7 @@
         "udev.log_level=3"
         "systemd.show_status=auto"
         "usbcore.quirks=5566:0008:gki"
+	"fbcon=map:1"
       ];
       loader.timeout = 0;
     };

@@ -4,6 +4,10 @@
   ...
 }: {
   flake.nixosModules.gnome = {pkgs, ...}: {
+    imports = [
+      ./_lock.nix
+    ];
+
     services.displayManager.gdm.enable = true;
     services.desktopManager.gnome.enable = true;
     services.displayManager.autoLogin.user = "scientiac";
@@ -39,9 +43,21 @@
       gnome-console
       yelp
     ];
+
+    systemd.user.services.gnome-startup-chime = {
+      description = "Play GNOME login chime (Pre-launch)";
+      wantedBy = ["gnome-session-pre.target"];
+      after = ["pipewire.service" "wireplumber.service"];
+      before = ["gnome-session-initialized.target"];
+
+      serviceConfig = {
+        Type = "oneshot";
+        ExecStart = "${pkgs.mpv}/bin/mpv --no-config --no-video ${./chime.mp3}";
+        Restart = "no";
+      };
+    };
   };
 
-  # you can move GNOME extensions/dconf settings here later.
   flake.homeModules.gnome = {
     config,
     pkgs,

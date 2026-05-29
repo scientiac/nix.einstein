@@ -4,6 +4,9 @@ My Gnome NixOS Configuraiton
 ![Screenshot](screenshot.png)
 
 ## Declerative
+```sh
+sudo nixos-rebuild switch --flake .#einstein
+```
 
 ## Imperative
 
