@@ -25,7 +25,7 @@
                 desc = "Find files";
               };
 
-              "<leader>bs" = {
+              "<leader>bb" = {
                 action = "<cmd>Pick buffers<CR>";
                 desc = "Find buffers";
               };
