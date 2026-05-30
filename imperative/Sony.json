@@ -1,5 +1,13 @@
 {
     "output": {
+        "bass_loudness#0": {
+            "bypass": false,
+            "input-gain": 0.0,
+            "link": -9.0,
+            "loudness": -3.0,
+            "output": -10.5,
+            "output-gain": 0.0
+        },
         "blocklist": [],
         "equalizer#0": {
             "balance": 0.0,
@@ -346,8 +354,17 @@
             },
             "split-channels": false
         },
+        "maximizer#0": {
+            "bypass": false,
+            "input-gain": 0.0,
+            "output-gain": 0.0,
+            "release": 25.0,
+            "threshold": 0.0
+        },
         "plugins_order": [
-            "equalizer#0"
+            "bass_loudness#0",
+            "equalizer#0",
+            "maximizer#0"
         ]
     }
 }
