@@ -19,35 +19,74 @@
 
         settings = {
           vim = {
-            maps.normal = {
-              "<leader>ff" = {
-                action = "<cmd>Pick files<CR>";
-                desc = "Find files";
+            maps = {
+              insert = {
+                "<C-h>" = {
+                  action = "<Left>";
+                  desc = "Move left";
+                };
+
+                "<C-j>" = {
+                  action = "<Down>";
+                  desc = "Move down";
+                };
+
+                "<C-k>" = {
+                  action = "<Up>";
+                  desc = "Move up";
+                };
+
+                "<C-l>" = {
+                  action = "<Right>";
+                  desc = "Move right";
+                };
               };
 
-              "<leader>bb" = {
-                action = "<cmd>Pick buffers<CR>";
-                desc = "Find buffers";
-              };
+              normal = {
+                "<Tab>" = {
+                  action = "<cmd>bnext<CR>";
+                  desc = "Next buffer";
+                };
 
-              "<leader>fr" = {
-                action = "<cmd>Pick resume<CR>";
-                desc = "Resume finding";
-              };
+                "<S-Tab>" = {
+                  action = "<cmd>bprev<CR>";
+                  desc = "Previous buffer";
+                };
 
-              "<leader>fw" = {
-                action = "<cmd>Pick grep_live<CR>";
-                desc = "Grep live";
-              };
+                "<C-c>" = {
+                  action = "<cmd>noh<CR>";
+                  desc = "Clear search highlights";
+                };
 
-              "<leader>e" = {
-                action = "<cmd>lua MiniFiles.open()<CR>";
-                desc = "Open Mini Files";
-              };
+                "<leader>ff" = {
+                  action = "<cmd>Pick files<CR>";
+                  desc = "Find files";
+                };
 
-              "<leader>bq" = {
-                action = "<cmd>lua require('mini.bufremove').delete()<CR>";
-                desc = "Remove current buffer";
+                "<leader>bb" = {
+                  action = "<cmd>Pick buffers<CR>";
+                  desc = "Find buffers";
+                };
+
+                "<leader>fr" = {
+                  action = "<cmd>Pick resume<CR>";
+                  desc = "Resume finding";
+                };
+
+                "<leader>fw" = {
+                  action = "<cmd>Pick grep_live<CR>";
+                  desc = "Grep live";
+                };
+
+                "<leader>e" = {
+                  action = "<cmd>lua MiniFiles.open()<CR>";
+                  desc = "Open Mini Files";
+                };
+
+                "<leader>bq" = {
+                  action = "<cmd>lua require('mini.bufremove').delete()<CR>";
+                  desc = "Remove current buffer";
+                };
               };
             };
 
