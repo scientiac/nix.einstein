@@ -12,6 +12,7 @@
       signal-desktop
       fragments
       foliate
+      newsflash
     ];
   };
 }

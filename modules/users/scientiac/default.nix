@@ -47,6 +47,7 @@
         self.homeModules.ghostty
         self.homeModules.terminal
         self.homeModules.graphical
+        self.homeModules.zathura
         self.homeModules.mpv
       ];
 
