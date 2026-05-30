@@ -40,6 +40,7 @@
         config = {
           global = {
             hide_env_diff = true;
+            warn_timeout = 0;
           };
         };
       };
