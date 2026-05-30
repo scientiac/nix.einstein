@@ -11,6 +11,8 @@
     home.packages = with pkgs; [
       lazygit
       comma
+      alejandra
+      git
     ];
 
     programs.eza = {
