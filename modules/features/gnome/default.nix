@@ -70,8 +70,10 @@
         just-perfection
         caffeine
         copyous
+	valent
       ])
       ++ (with pkgs; [
+	refine
         adw-gtk3
         nautilus-python
       ]);
@@ -122,8 +124,8 @@
       };
 
       "org/gnome/shell" = {
-        favorite-apps = [
-        ];
+        favorite-apps = [];
+        disable-extension-version-validation = true;
       };
 
       "org/gnome/shell/extensions/just-perfection" = {
