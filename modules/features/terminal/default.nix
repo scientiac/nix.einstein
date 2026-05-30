@@ -11,6 +11,7 @@
     home.packages = with pkgs; [
       lazygit
       comma
+      wl-clipboard
     ];
 
     programs.eza = {
@@ -19,6 +20,11 @@
     };
 
     programs.zoxide = {
+      enable = true;
+      enableFishIntegration = true;
+    };
+
+    programs.fzf = {
       enable = true;
       enableFishIntegration = true;
     };
