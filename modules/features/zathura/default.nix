@@ -19,6 +19,10 @@
           adjust-open = "best-fit";
           font = "FantasqueSansM Nerd Font Mono 10";
         };
+
+        mappings = {
+          f = "toggle_fullscreen";
+        };
       };
     };
 }

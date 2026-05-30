@@ -2,32 +2,47 @@
   self,
   inputs,
   ...
-}: {
-  flake.homeModules.terminal = {
-    config,
-    pkgs,
-    ...
-  }: {
-    home.packages = with pkgs; [
-      lazygit
-      comma
-      alejandra
-      git
-    ];
+}:
+{
+  flake.homeModules.terminal =
+    {
+      config,
+      pkgs,
+      ...
+    }:
+    {
+      home.packages = with pkgs; [
+        lazygit
+        comma
+        alejandra
+        git
+      ];
 
-    programs.eza = {
-      enable = true;
-      enableFishIntegration = true;
-    };
+      programs.eza = {
+        enable = true;
+        enableFishIntegration = true;
+      };
 
-    programs.zoxide = {
-      enable = true;
-      enableFishIntegration = true;
-    };
+      programs.zoxide = {
+        enable = true;
+        enableFishIntegration = true;
+      };
 
-    programs.fzf = {
-      enable = true;
-      enableFishIntegration = true;
+      programs.fzf = {
+        enable = true;
+        enableFishIntegration = true;
+      };
+
+      programs.direnv = {
+        enable = true;
+        enableFishIntegration = true;
+        nix-direnv.enable = true;
+        config = {
+          global = {
+            hide_env_diff = true;
+          };
+        };
+      };
+
     };
-  };
 }
