@@ -13,6 +13,7 @@
 
       settings = {
         title = "Ghostty";
+        theme = "Catppuccin Mocha";
 
         font-size = 12;
         font-family = "VictorMono Nerd Font Mono";

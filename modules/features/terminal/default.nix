@@ -11,7 +11,6 @@
     home.packages = with pkgs; [
       lazygit
       comma
-      wl-clipboard
     ];
 
     programs.eza = {
