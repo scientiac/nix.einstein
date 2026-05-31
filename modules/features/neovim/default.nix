@@ -109,34 +109,6 @@
 
             undoFile.enable = true;
 
-            theme = {
-              enable = true;
-              name = "catppuccin";
-              style = "mocha";
-              transparent = true;
-              extraConfig = ''
-                require("catppuccin").setup({
-                  background = { light = "latte", dark = "mocha" },
-                  float = {
-                    transparent = true,
-                    solid = true,
-                  },
-                  transparent_background = true,
-                  compile = true,
-                  integrations = {
-                    snacks = {
-                      enabled = true,
-                      indent_scope_color = "lavender",
-                    },
-                    treesitter = true,
-                    mini = {
-                      enabled = true,
-                    },
-                  },
-                })
-              '';
-            };
-
             ui.borders.enable = true;
             ui.borders.globalStyle = "none";
 
@@ -166,6 +138,21 @@
               pick.enable = true;
               completion.enable = true;
             };
+
+            terminal.toggleterm = {
+              enable = true;
+              setupOpts = {
+                winbar.enabled = false;
+              };
+            };
+
+            startPlugins = [
+              "catppuccin"
+              "mini-clue"
+            ];
+
+            luaConfigRC.catppuccin = builtins.readFile ./catppuccin.lua;
+            luaConfigRC.mini-clue = builtins.readFile ./mini-clue.lua;
           };
         };
       };
