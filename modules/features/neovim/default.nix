@@ -127,7 +127,7 @@
 
             clipboard = {
               enable = true;
-              registers = "unnamed,unnamedplus";
+              registers = "unnamedplus";
 
               providers.wl-copy.enable = true;
             };
