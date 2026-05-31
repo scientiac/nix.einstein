@@ -3,6 +3,10 @@ My Gnome NixOS Configuraiton
 
 ![Screenshot](screenshot.png)
 
+| Desktop | Drawer |
+| :----: | :----: |
+| ![1](images/desktop.png) | ![2](images/appdrawer.png) |
+
 ## Declerative
 ```sh
 sudo nixos-rebuild switch --flake .#einstein
