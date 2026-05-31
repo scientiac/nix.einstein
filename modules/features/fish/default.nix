@@ -3,6 +3,16 @@
   inputs,
   ...
 }: {
+  flake.nixosModules.fish = {
+    config,
+    pkgs,
+    ...
+  }: {
+    programs.fish = {
+      enable = true;
+    };
+  };
+
   flake.homeModules.fish = {
     config,
     pkgs,

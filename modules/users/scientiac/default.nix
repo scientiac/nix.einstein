@@ -14,6 +14,7 @@
     {
       users.users.scientiac = {
         isNormalUser = true;
+        shell = pkgs.fish;
         description = "scientiac";
         extraGroups = [
           "networkmanager"
@@ -22,6 +23,7 @@
       };
 
       imports = [
+        self.nixosModules.fish
         inputs.home-manager.nixosModules.home-manager
       ];
 

@@ -16,7 +16,14 @@
         comma
         alejandra
         git
+        devenv
       ];
+
+      programs.fish = {
+        shellInit = ''
+          devenv hook fish | source
+        '';
+      };
 
       programs.eza = {
         enable = true;

@@ -142,9 +142,15 @@
 
             lsp.enable = true;
 
-            languages.nix = {
-              enable = true;
-              format.enable = true;
+            languages = {
+              go = {
+                enable = true;
+                extensions.gopher-nvim.enable = true;
+              };
+              nix = {
+                enable = true;
+                format.enable = true;
+              };
             };
 
             clipboard = {
