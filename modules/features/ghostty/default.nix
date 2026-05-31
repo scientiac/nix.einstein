@@ -2,42 +2,50 @@
   self,
   inputs,
   ...
-}: {
-  flake.homeModules.ghostty = {
-    config,
-    pkgs,
-    ...
-  }: {
-    programs.ghostty = {
-      enable = true;
+}:
+{
+  flake.homeModules.ghostty =
+    {
+      config,
+      pkgs,
+      ...
+    }:
+    {
+      programs.ghostty = {
+        enable = true;
 
-      settings = {
-        title = "Ghostty";
-        theme = "light:Catppuccin Latte,dark:Catppuccin Mocha";
+        settings = {
+          title = "Ghostty";
+          theme = "light:Catppuccin Latte,dark:Catppuccin Mocha";
 
-        font-size = 12;
-        font-family = "VictorMono Nerd Font Mono";
+          font-size = 12;
+          font-family = "VictorMono Nerd Font Mono";
 
-        mouse-hide-while-typing = true;
+          mouse-hide-while-typing = true;
 
-        window-padding-x = 8;
-        gtk-titlebar = false;
-        window-theme = "ghostty";
+          window-padding-x = 8;
+          window-padding-y = 4;
 
-        linux-cgroup = "single-instance";
-        gtk-single-instance = true;
-        gtk-wide-tabs = false;
+          window-width = 150;
+          window-height = 35;
 
-        command = "fish";
-        shell-integration = "fish";
+          gtk-titlebar = false;
+          window-theme = "ghostty";
 
-        quick-terminal-position = "top";
+          linux-cgroup = "single-instance";
+          gtk-single-instance = true;
+          gtk-wide-tabs = false;
 
-        keybind = [
-          "ctrl+shift+o=toggle_tab_overview"
-          "ctrl+s=toggle_quick_terminal"
-        ];
+          command = "fish";
+          shell-integration = "fish";
+
+          quick-terminal-position = "top";
+
+          keybind = [
+            "ctrl+shift+o=toggle_tab_overview"
+            "ctrl+s=toggle_quick_terminal"
+          ];
+        };
       };
     };
-  };
 }
