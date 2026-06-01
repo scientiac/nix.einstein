@@ -25,7 +25,6 @@
         neovim
         wget
         wl-clipboard
-        inputs.helium.packages.${stdenv.hostPlatform.system}.default
       ];
 
       fonts.packages = with pkgs; [

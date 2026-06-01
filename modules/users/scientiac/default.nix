@@ -50,6 +50,7 @@
         self.homeModules.terminal
         self.homeModules.graphical
         self.homeModules.zathura
+        self.homeModules.beets
         self.homeModules.mpv
       ];
 

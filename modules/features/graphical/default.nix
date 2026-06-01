@@ -9,6 +9,7 @@
     ...
   }: {
     home.packages = with pkgs; [
+      inputs.helium.packages.${stdenv.hostPlatform.system}.default
       signal-desktop
       fragments
       foliate
