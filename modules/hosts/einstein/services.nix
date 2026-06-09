@@ -33,13 +33,10 @@
 
       services.kmscon = {
         enable = true;
-        fonts = [
-          {
-            package = pkgs.nerd-fonts.fantasque-sans-mono;
-            name = "FantasqueSansM Nerd Font Mono";
-          }
-        ];
-        extraConfig = "font-size=26";
+        config = {
+          font-name = "FantasqueSansM Nerd Font Mono";
+          font-size = 26;
+        };
       };
     };
 }
