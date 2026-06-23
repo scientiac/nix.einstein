@@ -14,6 +14,8 @@
       fragments
       foliate
       newsflash
+      inkscape
+      blender
     ];
   };
 }

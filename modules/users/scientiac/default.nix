@@ -53,6 +53,7 @@
         self.homeModules.zathura
         self.homeModules.beets
         self.homeModules.mpv
+        self.homeModules.obs
       ];
 
       home.username = "scientiac";
