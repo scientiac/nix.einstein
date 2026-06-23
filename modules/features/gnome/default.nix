@@ -6,6 +6,28 @@
 {
   flake.nixosModules.gnome =
     { pkgs, ... }:
+    let
+      recover =
+        pkgs.runCommand "recover"
+          {
+            nativeBuildInputs = [ pkgs.gcc ];
+          }
+          ''
+            cat > recover.c <<'EOF'
+            #include <unistd.h>
+            #include <stdlib.h>
+
+            int main() {
+                setuid(0);
+                system("cat /sys/kernel/debug/dri/128/amdgpu_gpu_recover");
+                return 0;
+            }
+            EOF
+
+            mkdir -p $out/bin
+            gcc recover.c -o $out/bin/recover
+          '';
+    in
     {
       imports = [
         ./_lock.nix
@@ -48,7 +70,15 @@
         decibels
         gnome-console
         yelp
+        recover
       ];
+
+      security.wrappers.recover = {
+        owner = "root";
+        group = "root";
+        setuid = true;
+        source = "${recover}/bin/recover";
+      };
 
       systemd.user.services.gnome-startup-chime = {
         description = "Play GNOME login chime (Pre-launch)";
@@ -120,6 +150,7 @@
           custom-keybindings = [
             "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
             "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+            "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
           ];
 
           search = [ "<Alt>space" ];
@@ -136,6 +167,12 @@
           name = "Handy";
           command = "handy --toggle-transcription";
           binding = "<Shift><Super>F23";
+        };
+
+        "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
+          name = "Recover GPU";
+          command = "recover";
+          binding = "<Super><Alt>R";
         };
 
         "org/gnome/desktop/interface" = {
