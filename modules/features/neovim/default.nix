@@ -19,76 +19,86 @@
 
         settings = {
           vim = {
-            maps = {
-              insert = {
-                "<C-h>" = {
-                  action = "<Left>";
-                  desc = "Move left";
-                };
-
-                "<C-j>" = {
-                  action = "<Down>";
-                  desc = "Move down";
-                };
-
-                "<C-k>" = {
-                  action = "<Up>";
-                  desc = "Move up";
-                };
-
-                "<C-l>" = {
-                  action = "<Right>";
-                  desc = "Move right";
-                };
-              };
-
-              normal = {
-                "<Tab>" = {
-                  action = "<cmd>bnext<CR>";
-                  desc = "Next buffer";
-                };
-
-                "<S-Tab>" = {
-                  action = "<cmd>bprev<CR>";
-                  desc = "Previous buffer";
-                };
-
-                "<C-c>" = {
-                  action = "<cmd>noh<CR>";
-                  desc = "Clear search highlights";
-                };
-
-                "<leader>ff" = {
-                  action = "<cmd>Pick files<CR>";
-                  desc = "Find files";
-                };
-
-                "<leader>bb" = {
-                  action = "<cmd>Pick buffers<CR>";
-                  desc = "Find buffers";
-                };
-
-                "<leader>fr" = {
-                  action = "<cmd>Pick resume<CR>";
-                  desc = "Resume finding";
-                };
-
-                "<leader>fw" = {
-                  action = "<cmd>Pick grep_live<CR>";
-                  desc = "Grep live";
-                };
-
-                "<leader>e" = {
-                  action = "<cmd>lua MiniFiles.open()<CR>";
-                  desc = "Open Mini Files";
-                };
-
-                "<leader>bq" = {
-                  action = "<cmd>lua require('mini.bufremove').delete()<CR>";
-                  desc = "Remove current buffer";
-                };
-              };
-            };
+            keymaps = [
+              {
+                key = "<C-h>";
+                mode = "i";
+                action = "<Left>";
+                desc = "Move left";
+              }
+              {
+                key = "<C-j>";
+                mode = "i";
+                action = "<Down>";
+                desc = "Move down";
+              }
+              {
+                key = "<C-k>";
+                mode = "i";
+                action = "<Up>";
+                desc = "Move up";
+              }
+              {
+                key = "<C-l>";
+                mode = "i";
+                action = "<Right>";
+                desc = "Move right";
+              }
+              {
+                key = "<Tab>";
+                mode = "n";
+                action = "<cmd>bnext<CR>";
+                desc = "Next buffer";
+              }
+              {
+                key = "<S-Tab>";
+                mode = "n";
+                action = "<cmd>bprev<CR>";
+                desc = "Previous buffer";
+              }
+              {
+                key = "<C-c>";
+                mode = "n";
+                action = "<cmd>noh<CR>";
+                desc = "Clear search highlights";
+              }
+              {
+                key = "<leader>ff";
+                mode = "n";
+                action = "<cmd>Pick files<CR>";
+                desc = "Find files";
+              }
+              {
+                key = "<leader>bb";
+                mode = "n";
+                action = "<cmd>Pick buffers<CR>";
+                desc = "Find buffers";
+              }
+              {
+                key = "<leader>fr";
+                mode = "n";
+                action = "<cmd>Pick resume<CR>";
+                desc = "Resume finding";
+              }
+              {
+                key = "<leader>fw";
+                mode = "n";
+                action = "<cmd>Pick grep_live<CR>";
+                desc = "Grep live";
+              }
+              {
+                key = "<leader>e";
+                mode = "n";
+                action = "<cmd>lua MiniFiles.open()<CR>";
+                desc = "Open Mini Files";
+              }
+              {
+                key = "<leader>bq";
+                mode = "n";
+                action = "<cmd>lua require('mini.bufremove').delete()<CR>";
+                desc = "Remove current buffer";
+              }
+            ];
 
             viAlias = true;
             vimAlias = true;
@@ -120,6 +130,22 @@
                 extensions.gopher-nvim.enable = true;
               };
               nix = {
+                enable = true;
+                format.enable = true;
+              };
+              typescript = {
+                enable = true;
+                format.enable = true;
+              };
+              html = {
+                enable = true;
+                format.enable = true;
+              };
+              css = {
+                enable = true;
+                format.enable = true;
+              };
+              svelte = {
                 enable = true;
                 format.enable = true;
               };
