@@ -21,6 +21,7 @@
           obs-vaapi
           obs-gstreamer
           obs-vkcapture
+          obs-advanced-masks
         ];
       };
     };
