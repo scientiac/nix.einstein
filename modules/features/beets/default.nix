@@ -16,17 +16,26 @@
         kew
       ];
 
-      services.rescrobbled = {
-        enable = true;
-        settings = {
-          min-play-time = 0;
-          player-whitelist = [
-            "kew"
-            "com.jeffser.Nocturne"
-          ];
-          listenbrainz-token-file = config.age.secrets.listenbrainz.path;
+      systemd.user.services.rescrobbled = {
+        Unit.Description = "Rescrobbled Music Scrobbler Daemon";
+        Service = {
+          ExecStart = "${pkgs.rescrobbled}/bin/rescrobbled";
+          Restart = "on-failure";
         };
+        Install.WantedBy = [ "default.target" ];
       };
+
+      # services.rescrobbled = {
+      #   enable = true;
+      #   settings = {
+      #     min-play-time = 0;
+      #     player-whitelist = [
+      #       "kew"
+      #       "com.jeffser.Nocturne"
+      #     ];
+      #     listenbrainz-token-file = config.age.secrets.listenbrainz.path;
+      #   };
+      # };
 
       programs.beets = {
         enable = true;
