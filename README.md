@@ -11,12 +11,9 @@ sudo nixos-rebuild switch --flake .#einstein
 ```
 
 ## Imperative
+For testing applications.
 
 - Flatpak
 ```sh
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-```
-- Easyeffects
-```
-flatpak install flathub com.github.wwmm.easyeffects
 ```
