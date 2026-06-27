@@ -11,7 +11,7 @@
       ...
     }:
     {
-      programs.easyeffects = {
+      services.easyeffects = {
         enable = true;
         preset = "zen";
         extraPresets = {
