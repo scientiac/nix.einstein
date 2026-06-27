@@ -54,6 +54,7 @@
         self.homeModules.beets
         self.homeModules.mpv
         self.homeModules.obs
+        self.homeModules.exploration
       ];
 
       home.username = "scientiac";
