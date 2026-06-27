@@ -16,6 +16,7 @@
         comma
         alejandra
         git
+        ffmpeg-full
         devenv
       ];
 

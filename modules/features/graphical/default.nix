@@ -16,6 +16,7 @@
       newsflash
       inkscape
       blender
+      audacity
     ];
   };
 }
