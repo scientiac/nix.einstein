@@ -45,6 +45,7 @@
     }:
     {
       imports = [
+        self.homeModules.agenix
         self.homeModules.fish
         self.homeModules.gnome
         self.homeModules.ghostty

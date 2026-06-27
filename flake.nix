@@ -12,6 +12,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    agenix.url = "github:ryantm/agenix";
+
     nvf = {
       url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
