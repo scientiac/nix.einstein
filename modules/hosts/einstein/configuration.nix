@@ -45,6 +45,7 @@
         self.nixosModules.services
         self.nixosModules.networking
         self.nixosModules.home-manager
+        self.nixosModules.davinci
       ];
 
       system.stateVersion = "25.11";
