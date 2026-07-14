@@ -5,7 +5,7 @@
 }:
 {
   flake.nixosModules.gnome =
-    { pkgs, ... }:
+    { pkgs, inputs, ... }:
     let
       recover =
         pkgs.runCommand "recover"
@@ -60,6 +60,8 @@
         allowedUDPPortRanges = allowedTCPPortRanges;
       };
 
+      programs.whisp.enable = true;
+
       environment.gnome.excludePackages = with pkgs; [
         gnome-tour
         gnome-music
@@ -110,7 +112,7 @@
           appindicator
           just-perfection
           caffeine
-          copyous
+          # copyous
           valent
         ])
         ++ (with pkgs; [
@@ -151,6 +153,7 @@
             "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
             "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
             "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
+            "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/"
           ];
 
           search = [ "<Alt>space" ];
@@ -173,6 +176,12 @@
           name = "Recover GPU";
           command = "recover";
           binding = "<Super><Alt>R";
+        };
+
+        "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
+          name = "Notes";
+          command = "whisp";
+          binding = "<Super><Alt>space";
         };
 
         "org/gnome/desktop/interface" = {

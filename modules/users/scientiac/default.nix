@@ -25,6 +25,7 @@
 
       imports = [
         self.nixosModules.fish
+        inputs.whisp.nixosModules.default
         inputs.home-manager.nixosModules.home-manager
       ];
 
