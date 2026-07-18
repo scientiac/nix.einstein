@@ -18,6 +18,7 @@
         git
         ffmpeg-full
         devenv
+        inputs.torlink.packages.${stdenv.hostPlatform.system}.default
       ];
 
       programs.fish = {

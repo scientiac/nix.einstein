@@ -27,6 +27,7 @@
     };
 
     whisp.url = "github:scientiac/whisp";
+    torlink.url = "github:baairon/torlink";
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);

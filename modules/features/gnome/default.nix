@@ -60,8 +60,6 @@
         allowedUDPPortRanges = allowedTCPPortRanges;
       };
 
-      programs.whisp.enable = true;
-
       environment.gnome.excludePackages = with pkgs; [
         gnome-tour
         gnome-music
@@ -129,6 +127,26 @@
         iconTheme = {
           name = "MoreWaita";
           package = pkgs.morewaita-icon-theme;
+        };
+      };
+
+      programs.whisp = {
+        enable = true;
+        settings = {
+          data_dir = "${config.home.homeDirectory}/.local/share/whisp/notes";
+          font_name = "VictorMono Nerd Font Bold 12";
+          paper_theme = "blank";
+          confirm_delete = true;
+          color_scheme = "light";
+          startup_behavior = "last_note";
+          run_in_background = true;
+          run_on_startup = true;
+          start_hidden = true;
+          show_command_toasts = true;
+          archive_days = 0;
+          max_carousel_size = 10;
+          start_in_slate_mode = true;
+          wysiwyg_mode = true;
         };
       };
 

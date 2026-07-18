@@ -25,7 +25,6 @@
 
       imports = [
         self.nixosModules.fish
-        inputs.whisp.nixosModules.default
         inputs.home-manager.nixosModules.home-manager
       ];
 
@@ -58,6 +57,7 @@
         self.homeModules.obs
         self.homeModules.easyeffects
         self.homeModules.exploration
+        inputs.whisp.homeManagerModules.default
       ];
 
       home.username = "scientiac";
