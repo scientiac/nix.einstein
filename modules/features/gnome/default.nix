@@ -70,7 +70,6 @@
         decibels
         gnome-console
         yelp
-        recover
       ];
 
       security.wrappers.recover = {
@@ -117,6 +116,7 @@
           refine
           adw-gtk3
           nautilus-python
+          gnome-podcasts
 
           # speech to text
           handy
@@ -146,7 +146,6 @@
           archive_days = 0;
           max_carousel_size = 10;
           start_in_slate_mode = true;
-          wysiwyg_mode = true;
         };
       };
 
