@@ -26,8 +26,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    whisp.url = "github:scientiac/whisp";
+    whisp.url = "github:tanaybhomia/Whisp";
     torlink.url = "github:baairon/torlink";
+    firefox.url = "github:nix-community/flake-firefox-nightly";
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
