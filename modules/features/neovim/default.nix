@@ -111,6 +111,7 @@
               expandtab = true;
               softtabstop = 2;
               sidescrolloff = 2;
+              number = true;
             };
 
             lineNumberMode = "relative";
@@ -163,6 +164,7 @@
               pairs.enable = true;
               pick.enable = true;
               completion.enable = true;
+              bufremove.enable = true;
             };
 
             terminal.toggleterm = {
