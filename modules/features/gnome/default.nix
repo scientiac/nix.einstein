@@ -122,11 +122,10 @@
           handy
         ]);
 
-      gtk = {
-        enable = true;
+      gtk = { enable = true;
         iconTheme = {
-          name = "MoreWaita";
-          package = pkgs.morewaita-icon-theme;
+          name = "Adwaita";
+          package = pkgs.adwaita-icon-theme;
         };
       };
 
