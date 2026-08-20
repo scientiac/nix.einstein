@@ -12,14 +12,17 @@
     }:
     {
       home.packages = with pkgs; [
+        tmux
         lazygit
-        comma
         alejandra
         git
         ffmpeg-full
         devenv
+        chawan
         inputs.torlink.packages.${stdenv.hostPlatform.system}.default
       ];
+
+      programs.nix-index-database.comma.enable = true;
 
       programs.fish = {
         shellInit = ''

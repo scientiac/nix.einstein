@@ -58,6 +58,7 @@
         self.homeModules.easyeffects
         self.homeModules.exploration
         inputs.whisp.homeManagerModules.default
+        inputs.nix-index-database.homeModules.default
       ];
 
       home.username = "scientiac";

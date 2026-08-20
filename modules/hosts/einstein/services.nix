@@ -34,7 +34,7 @@
       services.kmscon = {
         enable = true;
         config = {
-          font-name = "FantasqueSansM Nerd Font Mono";
+          font-name = "VictorMono Nerd Font Mono";
           font-size = 26;
         };
       };
