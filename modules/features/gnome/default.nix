@@ -117,6 +117,7 @@
           adw-gtk3
           nautilus-python
           gnome-podcasts
+          tuba
 
           # speech to text
           handy
@@ -139,8 +140,6 @@
           color_scheme = "light";
           startup_behavior = "last_note";
           run_in_background = true;
-          run_on_startup = true;
-          start_hidden = true;
           show_command_toasts = true;
           archive_days = 0;
           max_carousel_size = 10;
