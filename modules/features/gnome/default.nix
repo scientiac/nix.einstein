@@ -29,14 +29,8 @@
           '';
     in
     {
-      imports = [
-        ./_lock.nix
-      ];
-
       services.displayManager.gdm.enable = true;
       services.desktopManager.gnome.enable = true;
-      services.displayManager.autoLogin.user = "scientiac";
-      services.displayManager.autoLogin.enable = true;
 
       hardware.sensor.iio.enable = true;
 
