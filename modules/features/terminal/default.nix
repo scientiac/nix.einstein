@@ -12,13 +12,13 @@
     }:
     {
       home.packages = with pkgs; [
-        tmux
         lazygit
         alejandra
         git
         ffmpeg-full
         devenv
         chawan
+        par
         inputs.torlink.packages.${stdenv.hostPlatform.system}.default
       ];
 

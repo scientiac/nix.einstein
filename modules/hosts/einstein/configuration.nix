@@ -53,6 +53,7 @@
       imports = [
         self.nixosModules.einsteinHardware
         self.nixosModules.neovim
+        self.nixosModules.tmux
         self.nixosModules.gnome
         self.nixosModules.audio
         self.nixosModules.boot
