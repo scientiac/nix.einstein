@@ -1,6 +1,7 @@
 {
   self,
   inputs,
+  lib,
   ...
 }:
 {
@@ -29,8 +30,19 @@
           '';
     in
     {
+      security.wrappers.recover = {
+        owner = "root";
+        group = "root";
+        setuid = true;
+        source = "${recover}/bin/recover";
+      };
+
       services.displayManager.gdm.enable = true;
       services.desktopManager.gnome.enable = true;
+
+      # primary boot to TTY
+      systemd.defaultUnit = lib.mkForce "multi-user.target";
+      systemd.services."kmsconvt@tty1".wantedBy = [ "getty.target" ];
 
       hardware.sensor.iio.enable = true;
 
@@ -65,29 +77,6 @@
         gnome-console
         yelp
       ];
-
-      security.wrappers.recover = {
-        owner = "root";
-        group = "root";
-        setuid = true;
-        source = "${recover}/bin/recover";
-      };
-
-      systemd.user.services.gnome-startup-chime = {
-        description = "Play GNOME login chime (Pre-launch)";
-        wantedBy = [ "gnome-session-pre.target" ];
-        after = [
-          "pipewire.service"
-          "wireplumber.service"
-        ];
-        before = [ "gnome-session-initialized.target" ];
-
-        serviceConfig = {
-          Type = "oneshot";
-          ExecStart = "${pkgs.mpv}/bin/mpv --no-config --no-video ${./chime.mp3}";
-          Restart = "no";
-        };
-      };
     };
 
   flake.homeModules.gnome =
@@ -103,7 +92,7 @@
           appindicator
           just-perfection
           caffeine
-          # copyous
+          copyous
           valent
         ])
         ++ (with pkgs; [
@@ -117,7 +106,8 @@
           handy
         ]);
 
-      gtk = { enable = true;
+      gtk = {
+        enable = true;
         iconTheme = {
           name = "Adwaita";
           package = pkgs.adwaita-icon-theme;
@@ -188,7 +178,7 @@
         };
 
         "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
-          name = "Notes";
+          name = "Whisp";
           command = "whisp";
           binding = "<Super><Alt>space";
         };

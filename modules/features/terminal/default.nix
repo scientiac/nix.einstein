@@ -20,6 +20,11 @@
         chawan
         par
         inputs.torlink.packages.${stdenv.hostPlatform.system}.default
+        inputs.bookokrat.packages.${stdenv.hostPlatform.system}.default
+
+        # Social
+        tut
+        gurk-rs
       ];
 
       programs.nix-index-database.comma.enable = true;

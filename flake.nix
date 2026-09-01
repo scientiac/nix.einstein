@@ -30,6 +30,10 @@
     };
 
     whisp.url = "github:tanaybhomia/Whisp";
+    # whisp.url = "github:scientiac/Whisp";
+
+    bookokrat.url = "github:bugzmanov/bookokrat";
+
     torlink.url = "github:baairon/torlink";
     firefox.url = "github:nix-community/flake-firefox-nightly";
   };
