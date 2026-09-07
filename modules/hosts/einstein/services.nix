@@ -36,6 +36,7 @@
         config = {
           font-name = "VictorMono Nerd Font Mono";
           font-size = 26;
+          mouse = false;
         };
       };
     };
