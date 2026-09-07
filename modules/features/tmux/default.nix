@@ -27,6 +27,10 @@
           # Mouse
           set -g mouse on
 
+          # Escape
+          set -sg escape-time 0
+
+
           # set Terminal Overrides
           set -ga terminal-overrides ",*:RGB"
 
