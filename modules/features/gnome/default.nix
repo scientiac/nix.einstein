@@ -199,7 +199,6 @@
           panel = false;
           panel-in-overview = true;
           dash = false;
-          top-panel-position = 1;
           clock-menu-position = 2;
           clock-menu-position-offset = 1;
         };
