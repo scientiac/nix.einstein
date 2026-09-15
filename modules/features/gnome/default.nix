@@ -101,6 +101,7 @@
           nautilus-python
           gnome-podcasts
           tuba
+          flare-signal
 
           # speech to text
           handy
