@@ -52,6 +52,7 @@
       # System Settings
       imports = [
         self.nixosModules.einsteinHardware
+        self.nixosModules.howdy
         self.nixosModules.neovim
         self.nixosModules.tmux
         self.nixosModules.gnome
