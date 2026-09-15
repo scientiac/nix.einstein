@@ -10,6 +10,12 @@
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 
+    howdy = {
+      url = "git+https://codeberg.org/nathawat/howdy-next";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,7 +31,7 @@
     davinci.url = "git+https://git.voidarc.co.uk/voidarc/nixos.davinci";
 
     helium = {
-      url = "github:schembriaiden/helium-browser-nix-flake";
+      url = "github:oxcl/nix-flake-helium-browser";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
