@@ -88,11 +88,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1789486261,
-        "narHash": "sha256-ji8oO5xeF2svfGikq9a7Ogl1LuEV64vnFmgmwjQ+jMw=",
+        "lastModified": 1789520592,
+        "narHash": "sha256-nrSFm29JuN1g+L95jsF7m3Q6djEb76syKje8tlcLz6M=",
         "owner": "nix-community",
         "repo": "flake-firefox-nightly",
-        "rev": "eec7ef5f7e77700d0fe4cb02040cad9c3072d7a3",
+        "rev": "6fc883d0a0463615de4c08249979094903ec90ea",
         "type": "github"
       },
       "original": {
@@ -254,11 +254,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789479887,
-        "narHash": "sha256-oyR5OcGX7uJIf5I9jVHA2c2cN+ULv20nxpltBPTEN7A=",
+        "lastModified": 1789544615,
+        "narHash": "sha256-Y5P41a7JvohHAVgAMcgPXTtU/oNjpaJROwnp28q9WHY=",
         "ref": "refs/heads/main",
-        "rev": "cc7dc795ee52beb20d76a6a3f547195449cdec04",
-        "revCount": 1124,
+        "rev": "b43aa758dd70566b1e1885f92922a54a6962adc0",
+        "revCount": 1129,
         "type": "git",
         "url": "https://codeberg.org/nathawat/howdy-next"
       },
@@ -432,11 +432,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1789458440,
-        "narHash": "sha256-Zq3ebjGURKGrgEWGFw35hrQjTM9MSxzuRhhJFA1rEdg=",
+        "lastModified": 1789491802,
+        "narHash": "sha256-b1oub1k+TSrJurSlVf44ZLtS83LvpKcJczY8XwsvzRI=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "7a1ebacb35eba7648fc5bb28020dc0ee76a21d5c",
+        "rev": "418b4364809447c9bce66e1e52ce0a194e7b4160",
         "type": "github"
       },
       "original": {
@@ -448,11 +448,11 @@
     },
     "nixpkgs_5": {
       "locked": {
-        "lastModified": 1789286504,
-        "narHash": "sha256-eiEK7cKZORNEvX0GeF3RtNEF/JXhgf2RqSp3230q13E=",
+        "lastModified": 1789426278,
+        "narHash": "sha256-GnotcvKtbTMnoVx6G4E7ZdUX6487Dky74dqq3pU7iRk=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "ef34387ddd751e1ab8857adf4676492d32eb24ec",
+        "rev": "efe6f071ede9d21c37462d2d6682d5e670099684",
         "type": "github"
       },
       "original": {
@@ -519,11 +519,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789333536,
-        "narHash": "sha256-C9GsjXostGh50d62SYEXVJOSDTwk7RjAumJmwzkJKEY=",
+        "lastModified": 1789510188,
+        "narHash": "sha256-umec9LKkWjK89Yx4XpvQStkgfKvhK7GjVf5m21bjzKU=",
         "owner": "NotAShelf",
         "repo": "nvf",
-        "rev": "2d6b480abfa9fcf84841e62c27922bfa3f3d0d2b",
+        "rev": "cdc7e7aaa7eb521bba1b38f54c3228d52cc31703",
         "type": "github"
       },
       "original": {
@@ -619,11 +619,11 @@
         "nixpkgs": "nixpkgs_7"
       },
       "locked": {
-        "lastModified": 1789445275,
-        "narHash": "sha256-UIX/YGn6m2uVGEts9nIzvNuyVMm8iGbgDzJm/z6ok7M=",
+        "lastModified": 1789535551,
+        "narHash": "sha256-kkDgjqrMbUtJ+LOn6e9BTxBO249kbjJBpT1XoNVDgqo=",
         "owner": "tanaybhomia",
         "repo": "Whisp",
-        "rev": "e6a1656dcba753fe5c10ce8d645cd6b563aa6465",
+        "rev": "8429f87e1a8a983616e13609fd4c2146438557ba",
         "type": "github"
       },
       "original": {
